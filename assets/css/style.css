@@ -1,0 +1,28 @@
+:root{
+    --white:#fff;
+    --black:#000;
+    --dark-pink:#FC226A
+    --theme-gradient: linear-gradient(to right, #fc226a 0%, #8c52ff 100%);
+    --dark-blue:#01054C;
+    --gray:#757F95;
+    --purple:#8a52fd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Condensed";
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul,
+ol {
+  list-style: none;
+}
+img{
+    display: block;
+}
