@@ -15,9 +15,18 @@
 body {
   font-family: "Roboto Condensed";
 }
+button{
+    cursor: pointer;
+}
 a {
   text-decoration: none;
   display: inline-block;
+}
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 ul,
 ol {
@@ -26,3 +35,4 @@ ol {
 img{
     display: block;
 }
+

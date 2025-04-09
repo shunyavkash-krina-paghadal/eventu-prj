@@ -1,0 +1,7 @@
+/* Topbar */
+
+.topbar{
+    background-color: var(--theme-gradient);
+    position: relative;
+    padding: 10px 0;
+}
