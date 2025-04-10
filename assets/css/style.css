@@ -1,7 +1,7 @@
 :root{
     --white:#fff;
     --black:#000;
-    --dark-pink:#FC226A
+    --dark-pink:#FC226A;
     --theme-gradient: linear-gradient(to right, #fc226a 0%, #8c52ff 100%);
     --dark-blue:#01054C;
     --gray:#757F95;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto Condensed";
+   font-family: 'Poppins';
 }
 button{
     cursor: pointer;
@@ -35,4 +35,6 @@ ol {
 img{
     display: block;
 }
-
+.realtive{
+  position: relative;
+}
