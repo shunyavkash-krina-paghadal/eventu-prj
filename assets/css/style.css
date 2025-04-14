@@ -255,19 +255,27 @@ img {
 .theme-btn1 svg {
   transition: 0.3s all ease-in-out;
 }
-.countdown-container {
+
+.countdown-box {
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #ff416c, #9932cc);
+  background: linear-gradient(to right, #ff0055, #7a00ff);
   padding: 20px 30px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
+width: 500px;
+  font-size: 2em;
+}
+.countdown {
+  display: flex;
+  background: var(--theme-gradient);
+  color: var(--white);
+  align-items: center;
+  padding-left: 20px;
   position: absolute;
-  right: 0;
   bottom: 0;
-  z-index: 99999;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  right: 0;
+  z-index: 1;
 }
 .time-box {
   text-align: center;
@@ -275,15 +283,24 @@ img {
 }
 .time-box span {
   display: block;
-  font-size: 2em;
-}
-.label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  margin-left: 20px;
+  font-size: 32px;
   font-weight: bold;
+}
+.time-box label {
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+.side-label {
+  writing-mode: vertical-rl;
+  transform: rotate(360deg);
+  font-weight: bold;
+  color: var(--white);
+  background: var(--white);
   color: var(--purple);
-  background-color: var(--white);
-  opacity: 0.9;
-  padding: 10px 0;
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  width: 100%;
+  letter-spacing: 2px;
 }

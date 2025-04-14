@@ -36,34 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // counter
-const now = new Date();
-const targetDate = new Date(now.getTime() + 1756 * 24 * 60 * 60 * 1000);
+const targetDate = new Date("2030-01-01T00:00:00").getTime();
 function updateCountdown() {
-  const current = new Date();
-  const diff = targetDate - current;
-  if (diff <= 0) {
-    document.getElementById("days").textContent = "0000";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
-    return;
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("days").innerText = days.toString().padStart(4, "0");
+  document.getElementById("hours").innerText = hours
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("minutes").innerText = minutes
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("seconds").innerText = seconds
+    .toString()
+    .padStart(2, "0");
+  if (distance < 0) {
+    document.getElementById("days").innerText = "0000";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
   }
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-  document.getElementById("days").textContent = days
-    .toString()
-    .padStart(4, "0");
-  document.getElementById("hours").textContent = hours
-    .toString()
-    .padStart(2, "0");
-  document.getElementById("minutes").textContent = minutes
-    .toString()
-    .padStart(2, "0");
-  document.getElementById("seconds").textContent = seconds
-    .toString()
-    .padStart(2, "0");
 }
 setInterval(updateCountdown, 1000);
-updateCountdown(); // initial call
