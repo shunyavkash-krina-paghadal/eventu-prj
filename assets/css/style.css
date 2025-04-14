@@ -15,6 +15,9 @@
 body {
   font-family: "Poppins";
 }
+html {
+  scroll-behavior: smooth;
+}
 button {
   cursor: pointer;
 }
@@ -162,8 +165,8 @@ img {
 }
 .hero-scroll-box {
   position: absolute;
-  left: 55px;
-  bottom: 50px;
+  left: 22px;
+  bottom: 17px;
   z-index: 2;
 }
 .hero-scroll {
@@ -251,6 +254,7 @@ img {
 }
 .theme-btn1:hover svg {
   transform: rotate(45deg);
+  color: var(--white);
 }
 .theme-btn1 svg {
   transition: 0.3s all ease-in-out;
@@ -260,10 +264,10 @@ img {
   display: flex;
   align-items: center;
   background: linear-gradient(to right, #ff0055, #7a00ff);
-  padding: 20px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
   color: white;
-width: 500px;
+  width: 500px;
   font-size: 2em;
 }
 .countdown {
@@ -283,7 +287,7 @@ width: 500px;
 }
 .time-box span {
   display: block;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
 }
 .time-box label {
@@ -303,4 +307,24 @@ width: 500px;
   font-size: 16px;
   width: 100%;
   letter-spacing: 2px;
+}
+#scroll-top {
+  background-color: var(--dark-pink);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+#scroll-top:hover svg {
+  transform: rotate(45deg);
+}
+#scroll-top svg {
+  transition: 0.3s all ease-in-out;
+}
+#scroll-top:hover {
+  background-color: var(--purple);
 }

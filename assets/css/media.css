@@ -1,4 +1,4 @@
-@media screen and  (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .topbar {
     display: none;
   }
@@ -7,15 +7,15 @@
   }
 }
 
-@media screen and  (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .div-search {
     display: none;
   }
-  .menu{
+  .menu {
     display: block;
     margin-left: 10px;
   }
-  .logo-img img{
+  .logo-img img {
     width: 150px;
   }
   .sidebar-content {
@@ -23,8 +23,38 @@
     height: 100%;
     max-width: none;
   }
-  .reports-contents{
+  .reports-contents {
     max-width: none;
     width: 100%;
+  }
+  .btn-hero {
+    display: inline-flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-detail p {
+    font-size: 17px;
+  }
+  .hero-head {
+    font-size: 68px;
+  }
+  .hero-detail h5 {
+    font-size: 17px;
+  }
+  .hero-main-head h2 {
+    font-size: 44px;
+  }
+  .hero-main-head p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    max-width: 569px;
+  }
+  .countdown {
+    display: none;
   }
 }
