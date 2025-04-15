@@ -124,7 +124,6 @@ header {
   font-weight: 500;
   position: relative;
   display: flex;
-  padding: 10px 0;
   align-items: center;
   gap: 9px;
 }
@@ -253,10 +252,7 @@ header {
   padding: 40px;
   max-width: 450px;
 }
-/* .content-sidebar h3,
-.contact-info h3,
-.follow-us h3 {
-} */
+
 .content-sidebar h3 {
   font-size: 25px;
   color: var(--dark-blue);
@@ -518,13 +514,11 @@ header {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  z-index: 99999;
 }
 #scroll-top:hover svg {
   transform: rotate(45deg);
 }
 #scroll-top svg {
   transition: 0.3s all ease-in-out;
-}
-#scroll-top:hover {
-  background-color: var(--purple);
 }
