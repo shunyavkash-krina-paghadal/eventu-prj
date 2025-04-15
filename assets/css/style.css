@@ -21,7 +21,7 @@ html {
 button {
   cursor: pointer;
 }
-::selection{
+::selection {
   background-color: #565656;
   color: var(--white);
 }
@@ -322,7 +322,7 @@ img {
   gap: 40px;
 }
 .about {
-  padding: 50px 0;
+  margin-block: 100px;
 }
 .about-img img {
   border-radius: 50%;
@@ -332,29 +332,33 @@ img {
 }
 .about-img {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 .img-1 img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 250px;
+  width: 150px;
   height: auto;
   border: 11px solid var(--white);
+  object-fit: cover;
 }
 .about-3 img {
   position: absolute;
   right: 0;
   top: 0;
-  width: 190px;
+  width: 150px;
   height: auto;
   border: 11px solid var(--white);
+  object-fit: cover;
 }
 .about-desc {
   position: absolute;
-  bottom: 160px;
-  left: -30px;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, 0%);
   background: var(--theme-gradient);
   max-width: 150px;
   padding: 20px;
@@ -421,15 +425,15 @@ img {
 .about-items .btn-hero {
   margin-top: 30px;
 }
-
 .shdow-text h4 {
   color: var(--gray);
-  font-size: 103px;
-  opacity: 5%;
+  opacity: 10%;
+  top: -100%;
+  left: 10%;
+  transform: translate(-15%, -15%);
+  font-size: 96px;
   position: absolute;
-  top: -70px;
-  left: 60px;
-  z-index: 99999;
+  z-index: -1;
   padding-bottom: 10px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -437,7 +441,6 @@ img {
 .title {
   position: relative;
 }
-
 /* Video section */
 .video-section {
   margin: 80px 0;

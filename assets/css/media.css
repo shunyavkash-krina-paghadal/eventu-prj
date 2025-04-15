@@ -5,8 +5,11 @@
   .header-list ul {
     display: none;
   }
-  .about-inner{
+  .about-inner {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .about-items {
+    margin-bottom: 60px;
   }
 }
 
@@ -34,6 +37,18 @@
     display: inline-flex;
     gap: 20px;
     flex-direction: column;
+  }
+  .about-img {
+    width: 303px;
+  }
+  .about-3 img {
+    width: 132px;
+  }
+  .img-1 img {
+    width: 137px;
+  }
+  .shdow-text h4 {
+    font-size: 47px;
   }
 }
 
