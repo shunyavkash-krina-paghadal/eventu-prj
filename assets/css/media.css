@@ -125,6 +125,19 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  .why-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .why-items {
+    width: 100%;
+  }
+  .why-theme-btn {
+    position: absolute;
+    bottom: 70px;
+    left: -11px;
+  }
 }
 @media screen and (max-width: 575px) {
   .div-search {
