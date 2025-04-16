@@ -75,30 +75,34 @@ Fancybox.bind("[data-fancybox]", {
 
 // Conuter-1
 
-const counters = document.querySelectorAll(".counter");
-const speed = 200; // The lower the slower
+const counters = document.querySelectorAll(".count");
+
+const options = {
+  threshold: 0.6,
+};
+
+const runCounter = (counter) => {
+  let startNumber = 0;
+  const endNumber = +counter.getAttribute("data-number");
+
+  const interval = setInterval(() => {
+    startNumber++;
+    counter.innerText = startNumber;
+    if (startNumber >= endNumber) {
+      clearInterval(interval);
+    }
+  }, 30);
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      runCounter(entry.target);
+      observer.unobserve(entry.target); // Run only once
+    }
+  });
+}, options);
 
 counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = +counter.getAttribute("data-target");
-    const count = +counter.innerText;
-
-    // Lower inc to slow and higher to slow
-    const inc = target / speed;
-
-    // console.log(inc);
-    // console.log(count);
-
-    // Check if target is reached
-    if (count < target) {
-      // Add inc to count and output in counter
-      counter.innerText = count + inc;
-      // Call function every ms
-      setTimeout(updateCount, 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCount();
+  observer.observe(counter);
 });
