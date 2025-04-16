@@ -97,7 +97,6 @@ img {
 .hero-main-head h2 {
   font-size: 60px;
   font-weight: 600;
-  margin: 20px 0;
   text-transform: uppercase;
   color: var(--white);
 }
@@ -148,7 +147,6 @@ img {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%) scale(0);
-  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: -1;
   transition: 0.3s all ease-in-out;
 }
@@ -489,7 +487,7 @@ img {
   text-align: center;
   background: var(--dark-pink);
   color: var(--white);
-  position: relative; /* Changed from absolute */
+  position: relative;
   border-radius: 50%;
   z-index: 11;
 }
