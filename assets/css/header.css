@@ -177,7 +177,9 @@ header {
 }
 
 /* side-bar */
-
+.para{
+  position: fixed;
+}
 #menu-overlay {
   position: fixed;
   top: 0;
@@ -190,6 +192,7 @@ header {
   align-items: center;
   z-index: 999;
   padding: 2rem;
+  transform: translate(100px);
   transition: 0.3s all ease-in-out;
 }
 
@@ -211,6 +214,7 @@ header {
 #menu-overlay.active {
   display: flex;
   transition: 0.3s all ease-in-out;
+  transform: translate(0);
 }
 
 .close-btn {
