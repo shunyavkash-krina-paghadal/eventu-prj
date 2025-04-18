@@ -15,6 +15,9 @@
 body {
   font-family: "Poppins";
 }
+.no-scroll {
+  overflow: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -106,9 +109,11 @@ img {
 .hero-main-head p {
   color: var(--white);
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   font-weight: 200;
   margin-bottom: 20px;
+}
+.hero-main-head {
   max-width: 700px;
 }
 .hero-main-head a {
@@ -337,7 +342,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 150px;
+  width: 40%;
   height: auto;
   border: 11px solid var(--white);
   object-fit: cover;
@@ -346,7 +351,7 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  width: 150px;
+  width: 33%;
   height: auto;
   border: 11px solid var(--white);
   object-fit: cover;
@@ -594,7 +599,7 @@ img {
 /* Our events */
 
 .our-schedule-section {
-  padding: 130px 0;
+  padding: 130px 0 80px 0;
 }
 .our-schedule-title {
   text-align: center;
@@ -830,7 +835,6 @@ img {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  margin-top: 100px;
 }
 .inspire-inner {
   padding-block: 70px;
@@ -1177,7 +1181,7 @@ img {
 
 /* Speker section */
 .speaker-section {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .speaker-title {
@@ -1530,4 +1534,168 @@ img {
   align-items: center;
   justify-content: center;
   bottom: 0;
+}
+
+/* Footer */
+
+footer {
+  background-image: url(../../assets/img/background/footer-bg.png);
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+  padding: 90px 0 10px 0;
+  background-repeat: no-repeat;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 50px;
+}
+.footer-items .paras {
+  color: var(--white);
+  font-size: 15px;
+  margin: 20px 0;
+  line-height: 1.9;
+  /* max-width: 300px; */
+  font-weight: 200;
+}
+
+.forms-section h4 {
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.forms-section input {
+  border: none;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 25px;
+}
+::placeholder {
+  color: var(--dark-blue);
+  font-size: 15px;
+}
+.footer-btn svg {
+  margin-left: 0;
+}
+.sponsers-btn.footer-btn {
+  position: absolute;
+  top: 24px;
+  right: 3px;
+  margin-top: 0;
+  padding: 12px;
+}
+.form-input {
+  position: relative;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.footer-head {
+  color: var(--white);
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.footer-head::before {
+  position: absolute;
+  content: "";
+  z-index: 99;
+  width: 90px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.087);
+  bottom: 0;
+  left: 0;
+}
+.footer-head::after {
+  position: absolute;
+  content: "";
+  z-index: 999;
+  width: 30px;
+  height: 2px;
+  background-color: var(--dark-pink);
+  bottom: 0;
+  left: 18px;
+}
+.footer-items a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-items ul {
+  padding: 20px 0;
+}
+.footer-items li {
+  margin: 10px 0;
+}
+.footer-items li a h5 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.footer-items li a {
+  transition: 0.5s all ease-in-out;
+  color: var(--white);
+}
+.footer-items li a svg {
+  color: var(--dark-pink);
+}
+.footer-items li a:hover {
+  transform: translatex(10px);
+  color: var(--dark-pink);
+}
+.footer-items h5 {
+  color: var(--white);
+  font-size: 16px;
+}
+.footer-items .reports-details .reports-icon:hover {
+  background-color: var(--purple);
+}
+.book-tik {
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+  color: var(--white);
+  margin-top: 30px;
+}
+.buy-tik-btn {
+  display: inline-flex;
+}
+.copy-right {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(220, 220, 220, 0.263);
+  padding-top: 40px;
+  margin-top: 70px;
+}
+.copy-right ul li a {
+  display: flex;
+  align-items: center;
+}
+.copy-right ul {
+  display: flex;
+}
+.copy-right span {
+  color: var(--dark-pink);
+  font-weight: 400;
+}
+.copy-right h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.copy-right svg {
+  color: var(--dark-pink);
+}
+.copy-right h5 {
+  color: var(--white);
+  font-weight: 400;
+  padding: 0 3px;
+  transition: 0.3s all ease-in-out;
+}
+.copy-right h5:hover {
+  color: var(--dark-pink);
 }

@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuBtn.addEventListener("click", function () {
     menuOverlay.classList.add("active");
+    document.body.classList.add("no-scroll");
   });
 
   closeBtn.addEventListener("click", function () {
     menuOverlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
   });
 });
 
