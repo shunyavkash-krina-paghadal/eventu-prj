@@ -111,7 +111,6 @@ counters.forEach((counter) => {
   observer.observe(counter);
 });
 
-
 // Loader
 $(document).ready(function () {
   $("body").addClass("no-scroll");
@@ -123,5 +122,55 @@ $(document).ready(function () {
       .fadeOut("slow", function () {
         $("body").removeClass("no-scroll");
       });
+  });
+});
+
+// ABOUT-PAGE
+
+var swiper = new Swiper(".reviewSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+// Back-to-top
+
+const scrollBtn = document.getElementById("scroll-top");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });

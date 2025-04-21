@@ -90,6 +90,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  .get-in-inner {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media screen and (max-width: 767px) {
   .hero-detail p {
@@ -236,7 +241,8 @@
   .about-content h2,
   .speaker-head,
   .blog-title h2,
-  .sponsors-title h2 {
+  .sponsors-title h2,
+  .slider-head {
     font-size: 38px;
     text-align: left;
   }
@@ -248,12 +254,15 @@
     text-align: left;
   }
   .blog-title h3,
-  .sponsors-title h3 {
+  .sponsors-title h3 ,.slider-title {
     text-align: left;
   }
   .join-title h2 {
     font-size: 37px;
   }
+   .slider-head {
+    font-weight: 600;
+   }
   .speaker-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -275,11 +284,31 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+  .first-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .input-first svg {
+    color: var(--dark-pink);
+    position: absolute;
+    top: 21%;
+    left: 2%;
+    background-color: var(--white);
+  }
 }
 @media screen and (max-width: 630px) {
   .footer-inner {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
     gap: 14px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .num-div .span1 {
+    position: absolute;
+    top: 4px;
+    right: 70%;
+    z-index: 1;
   }
 }

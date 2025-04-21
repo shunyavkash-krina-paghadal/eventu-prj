@@ -529,6 +529,9 @@ header {
 #scroll-top svg {
   transition: 0.3s all ease-in-out;
 }
+#scroll-top.show {
+  display: flex;
+}
 
 /* Loder */
 
@@ -537,7 +540,7 @@ header {
   height: 100%;
   position: fixed;
   z-index: 99999;
-  background:var(--white);
+  background: var(--white);
 }
 .loader {
   display: inline-block;
@@ -545,7 +548,7 @@ header {
   height: 30px;
   position: fixed;
   z-index: 999999999;
-  border: 4px solid  var(--dark-pink);
+  border: 4px solid var(--dark-pink);
   top: 50%;
   left: 50%;
   animation: loader 2s infinite ease;
@@ -555,7 +558,7 @@ header {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color:var(--dark-pink);
+  background-color: var(--dark-pink);
   animation: loader-inner 2s infinite ease-in;
 }
 
