@@ -222,12 +222,23 @@
     flex-direction: column;
   }
   .pricing-title h2,
-  .our-schedule-title h2 {
+  .our-schedule-title h2,
+  .about-content h2,
+  .speaker-head,
+  .blog-title h2,
+  .sponsors-title h2 {
     font-size: 38px;
     text-align: left;
   }
   .pricing-title,
-  .our-schedule-title {
+  .our-schedule-title,
+  .speaker-title,
+  .blog-title,
+  .sponsors-title {
+    text-align: left;
+  }
+  .blog-title h3,
+  .sponsors-title h3 {
     text-align: left;
   }
   .join-title h2 {

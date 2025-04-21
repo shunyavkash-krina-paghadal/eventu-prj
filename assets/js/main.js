@@ -1,3 +1,4 @@
+// overlay
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
   const menuOverlay = document.getElementById("menu-overlay");
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// reports-overlay
 document.addEventListener("DOMContentLoaded", function () {
   const openReportsBtn = document.getElementById("openModal");
   const reportModal = document.getElementById("report-modal");
@@ -68,8 +70,8 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 // Fancybox
+
 Fancybox.bind("[data-fancybox]", {
-  // options if needed
   YouTube: {
     autoplay: true,
   },
@@ -100,11 +102,26 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       runCounter(entry.target);
-      observer.unobserve(entry.target); // Run only once
+      observer.unobserve(entry.target);
     }
   });
 }, options);
 
 counters.forEach((counter) => {
   observer.observe(counter);
+});
+
+
+// Loader
+$(document).ready(function () {
+  $("body").addClass("no-scroll");
+
+  $(window).on("load", function () {
+    $(".loader").delay(2000).fadeOut("slow");
+    $("#overlayer")
+      .delay(2000)
+      .fadeOut("slow", function () {
+        $("body").removeClass("no-scroll");
+      });
+  });
 });
