@@ -30,7 +30,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media screen and (max-width: 991px) {
   .topbar {
     display: none;
@@ -85,8 +84,13 @@
   .about-img {
     margin-inline: auto;
   }
+  /* CONTACT-PAGE */
+  .contact-info-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
-
 @media screen and (max-width: 767px) {
   .hero-detail p {
     font-size: 17px;
@@ -166,6 +170,12 @@
   }
   .copy-right h4 {
     margin-bottom: 20px;
+  }
+  /* CONTACT-PAGE */
+  .contact-info-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -256,6 +266,13 @@
   .copy-right ul {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  /* CONTACT-PAGE */
+  .contact-info-inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 }
