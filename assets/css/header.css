@@ -171,6 +171,7 @@ header {
 .search {
   font-size: 19px;
   transition: 0.3s all ease-in-out;
+  color: var(--dark-blue);
 }
 .search:hover {
   color: var(--dark-pink);

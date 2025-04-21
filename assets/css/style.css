@@ -1777,8 +1777,7 @@ button {
 .contact-sec-content h4{
   color:var(--dark-blue) ;
   margin:10px 0;
-  text-align: center;
-  font-size: 30px;
+  font-size: 18px;
 }
 .contact-info-inner {
   display: grid;
