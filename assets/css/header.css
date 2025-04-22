@@ -120,7 +120,7 @@ header {
   justify-content: space-between;
 }
 .header-list ul li a {
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 .header-list ul a {
   color: var(--dark-blue);
