@@ -141,7 +141,9 @@
   .countdown {
     display: none;
   }
-
+  .footer-itemss {
+    grid-column: 3 span;
+  }
   .schedule-bottom {
     display: flex;
     flex-direction: column;
@@ -187,7 +189,7 @@
   }
   .footer-inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 14px;
   }
   .copy-right {
@@ -256,13 +258,14 @@
   .schedule-inners {
     flex-direction: column;
   }
-  .pricing-title h2,
+  .pricing-main,
   .our-schedule-title h2,
   .about-content h2,
   .speaker-head,
-  .blog-title h2,
-  .sponsors-title h2,
-  .slider-head {
+  .blog-main,
+  .spon-main,
+  .slider-head,
+  .sub-title {
     font-size: 38px;
     text-align: left;
   }
@@ -273,13 +276,15 @@
   .sponsors-title {
     text-align: left;
   }
-  .blog-title h3,
-  .sponsors-title h3,
+  .blog-sub,
+  .spon-title,
   .slider-title {
     text-align: left;
   }
-  .join-title h2 {
+  .sub-title {
     font-size: 37px;
+    max-width: 300px;
+    text-align: center;
   }
   .slider-head {
     font-weight: 600;
@@ -393,13 +398,14 @@
     border-radius: 0;
   }
 }
-@media screen and (max-width: 630px) {
-  .footer-inner {
+@media screen and (max-width: 632px) {
+  .footer-col {
     display: grid;
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-column:1/2 ;
     gap: 14px;
   }
-}
+
+  }
 @media screen and (max-width: 360px) {
   .num-div .span1 {
     position: absolute;
