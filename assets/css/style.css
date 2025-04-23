@@ -99,21 +99,22 @@ img {
   font-weight: 400;
   margin-bottom: 20px;
 }
-.hero-main-head h2 {
+.hero-main-title {
   font-size: 60px;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--white);
+  margin: 10px 0;
 }
-.hero-main-head span {
+.hero-main-title span {
   color: var(--dark-pink);
 }
-.hero-main-head p {
+.hero-richtext {
   color: var(--white);
   font-size: 20px;
   line-height: 1.5;
   font-weight: 200;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .hero-main-head {
   max-width: 700px;
@@ -381,24 +382,24 @@ img {
   font-weight: 300;
   font-size: 20px;
 }
-.about-content h3 {
+.about-title {
   color: var(--dark-pink);
   font-weight: 500;
   letter-spacing: 3px;
   font-size: 23px;
 }
-.about-content h2 {
+.about-main-title {
   color: var(--dark-blue);
   font-size: 45px;
   font-weight: 600;
   max-width: 500px;
 }
-.about-content span {
+.about-main-title span {
   color: var(--dark-pink);
   font-weight: 400;
   letter-spacing: 0.03em;
 }
-.about-content p {
+.about-richtext {
   color: var(--gray);
   font-weight: 400;
   font-size: 16px;
@@ -406,23 +407,23 @@ img {
   padding: 10px 0;
   font-family: "Roboto", sans-serif;
 }
-.about-content ul li {
+.about-content ol li {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 15px 0;
 }
-.about-content ul:last-child li:not(:last-child):nth-child(-n + 2) {
+.about-content ol {
+  list-style: decimal!important;
+}
+.about-content ol:last-child li:not(:last-child):nth-child(-n + 2) {
   border-bottom: 1px solid rgba(220, 220, 220, 0.545);
   max-width: 500px;
 }
-.about-content ul li h4 {
+.about-content ol li h4 {
   color: var(--dark-blue);
   font-weight: 600;
   font-size: 20px;
-}
-.about-content ul li span {
-  font-weight: 600;
 }
 .about-items .btn-hero svg {
   margin-left: 10px;
@@ -528,7 +529,7 @@ img {
 
 .card-inner {
   display: grid;
-  grid-template-columns: repeat(4 ,1fr);
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
   position: relative;
   z-index: 1;

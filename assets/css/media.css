@@ -128,10 +128,10 @@
   .hero-detail h5 {
     font-size: 17px;
   }
-  .hero-main-head h2 {
+  .hero-main-title {
     font-size: 44px;
   }
-  .hero-main-head p {
+  .hero-richtext p {
     font-size: 18px;
     line-height: 30px;
     font-weight: 200;
