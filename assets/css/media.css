@@ -18,7 +18,7 @@
   }
   .card-inner {
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .play-btn {
     margin-top: 60px;
@@ -112,6 +112,12 @@
     overflow-y: auto;
   }
 }
+@media screen and (max-width: 799px) {
+  .card-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 767px) {
   .hero-detail p {
     font-size: 17px;
@@ -135,9 +141,7 @@
   .countdown {
     display: none;
   }
-  .card-main {
-    width: 50%;
-  }
+
   .schedule-bottom {
     display: flex;
     flex-direction: column;
@@ -294,7 +298,10 @@
     flex-direction: column;
     gap: 20px;
   }
-
+  .card-inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
   /* CONTACT-PAGE */
   .contact-info-inner {
     display: grid;
@@ -382,7 +389,7 @@
     margin-left: -20px;
     border-radius: 0;
   }
-  .blog-sec-img img{
+  .blog-sec-img img {
     border-radius: 0;
   }
 }
